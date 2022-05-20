@@ -5,12 +5,12 @@ set -e
 usage() {
   this=$1
   cat <<EOF
-$this: download go binaries for livebud/bud
+$this: download go binaries for fergloragain/bud
 
 Usage: $this [-b] bindir [version]
   -b sets bindir or installation directory, default "/usr/local/bin"
    [version] is a version number from
-   https://github.com/livebud/bud/releases
+   https://github.com/fergloragain/bud/releases
    If version is missing, then an attempt to find the latest will be found.
 
 EOF
@@ -291,7 +291,7 @@ End of functions from https://github.com/client9/shlib
 ------------------------------------------------------------------------
 EOF
 
-OWNER=livebud
+OWNER=fergloragain
 REPO=bud
 BINARY=bud
 FORMAT=tar.gz
@@ -319,7 +319,7 @@ adjust_arch
 echo "$PREFIX: found version ${VERSION} for ${OS}/${ARCH}"
 
 # The tarball path should include the version for v0.1.4+
-# See: https://github.com/livebud/bud/issues/52
+# See: https://github.com/fergloragain/bud/issues/52
 case "$VERSION" in
 0.0.[0-9]* | 0.1.[0-3])
 NAME=${BINARY}_${OS}_${ARCH}
